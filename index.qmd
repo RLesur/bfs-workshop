@@ -1,0 +1,156 @@
+---
+title: Le projet Onyxia
+subtitle: |
+  **[Comment tirer parti\
+  des technologies cloud\
+  sans se faire enfermer ?]{.orange}**
+author: |
+  Romain Lesur
+date: 2025-11-18
+slide-number: true
+footer: |
+  **IA et modernisation des statistiques officielles**
+# uncomment for French presentations:
+lang: fr
+# for blind readers:
+slide-tone: false
+# for @olevitt:
+chalkboard: # press the B key to toggle chalkboard
+  theme: whiteboard
+# uncomment to use the multiplex mode:
+#multiplex: true
+format:
+  # pick the light mode (onyxia-revealjs) or the dark mode (onyxia-dark-revealjs)
+  onyxia-revealjs:
+  #onyxia-dark-revealjs:
+    output-file: index.html
+# visual editor configuration:
+editor:
+  render-on-save: true
+---
+
+## Les besoins de traitement de données à l'Insee
+
+- Un millier de personnes touchant la donnée avec des langages de programmation (R, python...)
+- Depuis plus de 15 ans, un écosystème en très forte évolution
+- Développement de la _data science_, du ML et de l'IA: des besoins plus vastes et hétérogènes
+- L'infrastructure : facilitateur ou frein pour l'innovation ?
+
+## L'évolution de l'informatique pour le traitement de données
+
+A l'Insee :
+
+- 1940s-1960s : mécanographie
+- 1960s-1990s : ordinateurs centraux (mainframes)
+- 1990s-2010s : ordinateurs personnels (PC)
+- 2010s-... : serveurs mutualisés/bureau à distance
+- 2023 : technologies cloud
+
+## Les enjeux
+
+- Puissance de calcul
+  * Les PC ont leurs limites
+- Besoin d'une grande flexibilité (outils, langages, packages...) mais aussi de reproductibilité
+- Sécurité des données/contrôle d'accès
+  * Le PC est un environnement à proscrire
+- Le passage en production
+  * Déploiement d'applications/API
+  * MLOps (orchestration/monitoring)
+- [**Risque d'enfermement propriétaire**]{.orange}
+
+## Les opportunités des technologies cloud
+
+- Conteneurs (Docker)
+  * Flexibles et portables 
+  * Facilitent la reproductibilité
+- Orchestrateur de conteneurs (Kubernetes)
+  * Passage à l'échelle
+  * Facilite le passage en production
+- Stockage objet (S3)
+  * Facilite la gestion des données (_data lake_)
+  * Facilite l'usage de la donnée
+
+## L'ADN du projet Onyxia
+
+- Une plateforme orientée data science facilitant le passage en production
+- 100% open source (licence MIT)
+- Aucun enfermement propriétaire
+  * Onyxia ne doit pas devenir indispensable
+- 100% cloud native
+- Déployable n'importe où (clouds publics, _on premises_...)
+
+## Onyxia en action
+
+{{< video https://www.youtube.com/embed/FvpNfVrxBFM?si=Ekc0-3IXyv2imoVv&autoplay=1 width="100%" height="85%" >}}
+
+## Les choix structurants
+
+Des choix techniques
+
+- Kubernetes
+- S3
+- (Vault)
+
+Mais qui ont aussi des conséquences pratiques pour l'utilisateur
+
+- environnements de travail volatiles
+- utiliser git
+- utiliser S3
+- dissociation du code et des données
+
+## Onyxia : une interface comme liant technique
+
+![](img/onyxia-components.png){fig-align="center"}
+
+## Une interface qui favorise l'autonomie
+
+![](img/onyxia-launcher.png){fig-align="center"}
+
+## Un large catalogue de services
+
+![](img/onyxia-catalog.png){fig-align="center"}
+
+## Onyxia ne fait et ne fera pas tout
+
+Au coeur :
+
+- Lanceur de charts helm
+- Explorateur de fichiers et de données
+
+Ajoutez-y, au choix :
+
+- Une forge git, un registre d'images...
+- Une gouvernance des données, un catalogue de données...
+- Un catalogue de services
+- Des services de déploiement (sk8), un API manager...
+
+## SSP Cloud
+
+Un datalab en ligne <https://datalab.sspcloud.fr> pour
+
+- prototyper
+- se former
+- exclusivement sur des **données ouvertes**
+- accessible aux acteurs de l'ESR
+- un service en _best effort_
+- un [catalogue de formations](https://www.sspcloud.fr/formation) à la _data science_
+- un service [AI chat](https://llm.lab.sspcloud.fr/) (Ollama/Open WebUI)
+
+Depuis 2024, SSP Cloud est le datalab du projet européen [AIML4OS](https://cros.ec.europa.eu/dashboard/aiml4os).
+
+## La communauté Onyxia [onyxia.sh](https://onyxia.sh)
+
+- Un [slack](https://join.slack.com/t/3innovation/shared_invite/zt-1hnzukjcn-6biCSmVy4qvyDGwbNI~sWg)
+- _Community meetings_ chaque dernier jeudi du mois
+- Les acteurs ayant adopté Onyxia : Insee, Statistics Norway, Mercator Ocean International, Expertise France, ONU, GENES...
+- [awesome-onyxia](https://github.com/onyxia-datalab/awesome-onyxia) : une liste de projets de la communauté Onyxia
+
+## L'avenir
+
+- De nombreux acteurs publics et privés utilisent Onyxia
+- Des entreprises de service positionnées pour aider au déploiement d'Onyxia
+
+## Questions ?
+
+Retrouvez cette présentation\
+<https://rlesur.github.io/bfs-workshop>
