@@ -85,11 +85,7 @@ A l'Insee :
 
 ## Les choix structurants
 
-Des choix techniques
-
-- Kubernetes
-- S3
-- (Vault)
+Des choix techniques: Kubernetes, stockage objet
 
 Mais qui ont aussi des conséquences pratiques pour l'utilisateur
 
@@ -121,7 +117,7 @@ Ajoutez-y, au choix :
 
 - Une forge git, un registre d'images...
 - Une gouvernance des données, un catalogue de données...
-- Un catalogue de services
+- Un catalogue de services personnalisé
 - Des services de déploiement (sk8), un API manager...
 
 ## SSP Cloud
